@@ -22,8 +22,6 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(helmet()); // Active plusieurs sécurités HTTP par défaut
 
-app.use(mongoSanitize()); // Protège contre l'injection SQL
-
 app.use(express.static("public", { dotfiles: "deny" })); // Interdit d’accéder aux fichiers cachés
 
 app.use((err, req, res, next) => {
@@ -41,8 +39,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
-app.use(cors()); // Activez CORS pour toutes les requêtes
 
 // Exemple de données statiques pour les produits de mode
 const fashionTrends = [
