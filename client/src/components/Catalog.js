@@ -226,7 +226,7 @@ useEffect(() => {
     useEffect(() => {
       const seasonParam = searchParams.get("season")?.toLowerCase() || "";
     
-      // Fonction utilitaire pour vérifier les correspondances
+      // Fonction utilitaire pour vérifier les correspondances.
       const filterProducts = (product) => {
         return (
           (seasonParam === "all" || !seasonParam || product.seasons.includes(seasonParam)) &&
@@ -294,7 +294,7 @@ useEffect(() => {
       [name]: value,
     }));
   };
-
+  
   // Gérer l'état des menus déroulants
   const toggleDropdown = (dropdownName) => {
     setDropdownStates((prev) => ({
@@ -316,7 +316,7 @@ useEffect(() => {
         </div>
       )}
 
-
+      
 {spotifyPlaylist && (
   <div className="spotify-container">
     <div className="spotify-player">
